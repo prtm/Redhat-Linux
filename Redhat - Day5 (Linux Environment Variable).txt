@@ -1,0 +1,72 @@
+What is Linux Environment variable?
+Linux environment variable is an object that contains value. In simple terms it is a pair of data object and their respective values.
+
+Example ls command
+is found in /bin,users should execute the /bin/ls command to list files in the current directory
+
+Linux have a PATH variable.With the help of the PATH variable,full path is not required.
+The bash shell automatically searches through the directories listed in a user's PATH variable for the command that user typed.
+
+To show linux environment variable
+
+printenv,env command are used
+
+=======================================
+Linux environment can be set in 3 ways
+
+1.Temporary also know as Session Specific Variables
+2.permanent locally
+3.permanent globally
+
+temporary    export command is used
+
+echo $PATH       				--path
+mkdir custom_dir   				--make directory named as custom_dir
+export PATH="${PATH}:/home/user1/custom_dir"	--adding new path
+
+echo $PATH        				--to confirm path added
+
+//////////////////////// adding file to custom_dir \\\\\\\\\\\\\\\\\\\\\\\\
+cat > simple_script      ----we are in custom_dir folder,now adding new file
+echo "Hello world"
+chmod +x simple_script   ----chmod to change permission,+x for execute permission 
+simple_script            ---outputs Hello world
+==============================================================
+variables locally
+
+for security reason you should not define an environment variable globally unless you have sound understanding of linux system.
+
+
+The following files should be used for local environment variables on your system: ~/.profile,~/.bash_profile,~/.bash_login,~/.bash_logout
+
+vi ~/.bash_profile  ----add custom path to path variable inside file
+		    ----finally login and logout to check it is correct or not
+
+===============================================================================
+variables globally
+
+root permission requires to set linux environment variable globally.RHEL maintain and manage the environment variables in numberous files.But don't need to pay attentions on all files that can contain environment variables.Following the RHEL recommendation you should only set environmental variables in some particular files,they are:
+
+/etc/profile,/etc/bashrc,/etc/environment
+
+
+======================================================================
+making alias permanent on user level edit ~/.bashrc
+
+type after the line # User specific alias and function
+alias rm="mv -t ~/.trash"               ---move to trash using rm command
+
+
+making alias permanent on system level (globally) edit /etc/bashrc
+
+type after the line # System level custom alias
+alias ls="ls -l"		
+
+-----most popular use of alias is changing directory
+-----cp to be cp -i to stop unintented overwriting
+-----dir to be ls command
+
+
+
+
+=========================================================================
