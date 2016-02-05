@@ -1,0 +1,77 @@
+Basics--
+The defining component of Linux is the Linux kernel,an operating system kernel first released by Linus Torvalds.
+
+Windows kernel name  ---- WindowsNT
+
+					Linux
+  				       -------
+					  |
+					_____
+				       |    |
+				    .rpm    .deb
+
+.rpm - redhat package manager
+.deb - extension for debian software package
+
+examples of rpm				examples of deb
+Redhat					Debian
+Fedora					Ubuntu
+Centos					Kali linux
+
+Linux of minimun size 5MB,13.2 MB of Operating system
+==============================================================
+command line 			vs gui
+can be used in program		   specific location pointing
+fast process for large number	   multitasking
+More Resources capability	   Easy to use
+
+
+==============================================
+how to find difference between file and directory
+
+all directory have forward slash after the name
+ls -F
+
+a/     myfile.txt
+
+======================================================
+alias vs unalias
+
+alias is command to provide nickname to the command
+
+alias ..='cd ..'
+when you type .. then work as cd ..
+remember it only work in same terminal
+
+unalias ..
+will undo alias
+
+now command not found as ..
+
+=========================================================
+nautilus  directory_name to open it graphically 
+
+nautilus  /home/user/a/b/c
+
+=========================================================
+editor in linux
+
+gedit,emacs,vi,vim,nano,pico,gvim,leafpad
+=====================================================
+how to use vim?
+
+vim [file name]
+
+i	to insert mode
+esc 	to exit insert mod
+:w	to save changes			:w 	xyz123.txt
+:q	to quit
+:wq 	to save and quit
+:3	start cursor on 3rd line
+:q!	forcefull close without save
+/redhat   to search redhat in file
+
+to lock file
+vim	-x    xyz.txt  then it ask for password
+:set key=	remove password,esc then write it in last
+=================================================================
