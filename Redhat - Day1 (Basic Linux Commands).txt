@@ -22,7 +22,7 @@ ls 	-Z	The system_u,object_r,var_t and s0 output demonstrates the current SELinu
 
 //Basic commands to manage file
 
-cat     means catenate,It reads data from files,display the contents of a file at the command line.
+cat     means catenate,It reads and write data from files,display the contents of a file at the command line.
 
 >       output redirect used to create file,(can use it without cat to create file),redirect the output.
 >>	append the content next in file
