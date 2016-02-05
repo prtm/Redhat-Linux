@@ -1,0 +1,47 @@
+//File navigation in Command line
+
+command    description	
+pwd    	   present working directory
+
+cd         change directory | 1. cd .. to go parent directory | 2. cd [directory_name] to change directory
+
+ls         lists directory contents of files and directories
+
+	option	description
+ls 	-a	list all files including hidden file starting with '.'
+ls 	-i	list file's inode index number
+ls 	-l	list with long format - show permissions
+ls 	-la	list long format including hidden files
+ls 	-lh	list long format with readable file size
+ls 	-ls	list with long format with file size
+ls 	-r	list in reverse order
+ls 	-s	list file size
+ls 	-S	sort by file size
+ls 	-lt	time-based list
+ls 	-Z	The system_u,object_r,var_t and s0 output demonstrates the current SELinux contexts of the noted files.
+
+//Basic commands to manage file
+
+cat     means catenate,It reads data from files,display the contents of a file at the command line.
+
+>       output redirect used to create file,(can use it without cat to create file),redirect the output.
+>>	append the content next in file
+
+ 	Displaying text files  ----- cat [file_name]
+	Concatenate text files ----- cat [file1] [file2]
+	
+cat file1.txt > file2.txt    		reads the content of file1.txt and '>' redirect output to file2.txt [overwrite if file exist] 
+
+cat file1.txt >> file2.txt   		reads the content of file2.txt and '>>' append data to file2.txt
+cat file1.txt file2.txt > file3.txt     reads both file1.txt and file2.txt data and overwrite it to file3.txt
+cat file1.txt file2.txt >> file3.txt    reads both file1.txt and file2.txt data and append it to file3.txt
+
+
+
+
+	
+
+
+
+
+

@@ -1,0 +1,49 @@
+// continue to Basic commands to manage files
+
+mkdir  make directory,to create a new directory
+
+
+option			Description	
+-m, 	--mode=MODE	Set file mode (as with the chmod command).
+-p, 	--parents	Create parent directories as necessary. When this option is used, no error is reported if a specified DIRECTORY already exists.
+
+-v, 	--verbose	Verbose output(graphically information about background process); print a message for each created directory in terminal.
+
+
+Examples--
+mkdir abcd 	   	  --- create a new directory with name abcd
+mkdir abcd{1..20}  	  --- create 20 directory at once with name abcd1,abcd2,..abcd20
+mkdir -m a=rwx abcd       --- create directory abcd with permission of read,write and execute
+
+mkdir -p /home/prtm/x/y/z -- Creates the directory /home/prtm/x/y/z. If the parent directory /home/prtm/x/y does not already exist, mkdir will create that directory first.
+
+mkdir -p a/{c/e/{f,g},b,d}
+
+	    a
+    ________|______
+   |        |      |
+   b        c      d
+            |
+            e
+        ____|_____
+       |          |
+       f	  g           
+
+
+=================================================================================================
+rmdir  remove directory,to remove directory
+
+rmdir [directory_name]
+
+rmdir abcd 		removes the directory abcd (if exist)
+rmdir abcd{1..20}	removes the directory abcd1,abcd2,..abcd20 (if exist) 
+rmdir -v abcd{1..20}	(details about progress in terminal),removes the directory abcd1,abcd2,..abcd20 (if exist) 
+
+rmdir doesn't delete directory having data inside it
+==================================================================================================
+rm	remove command to remove both files and directory
+
+rm doesn't delete a directory until we give it a command option -rf
+
+rm -rf abcd   - remove the directory
+rm file.txt   - to remove file whether it contains data or not
