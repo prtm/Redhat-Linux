@@ -1,0 +1,62 @@
+//Compression
+ls -ldh
+
+-l for long listing
+-d for directory
+-h for size
+
+Question- How to remove history when you type?
+
+HISTCONTROL=ignorespace
+
+space before each command,command is now on not counted to history
+
+history -d [history_number]
+
+to delete the history of command HISTCONTROL=ignorespace
+
+=====================================================================
+Directory by default take 4KB size
+
+du -sh /etc   --------disk usage command to know,summary size in human readable form
+
+DMA-- dynamic memory allocation will give 4KB extra if needed depending upon number of files
+
+directory cannot be compressed but a file specially text file will compressed maximum
+
+
+likely to use
+zip     Gzip   	 bzip2
+90%	99%	 99.99%
+
+compression rate
+
+we use yes command to write,redirect output using > to the file
+
+yes hii hii hii hii hii hii hii hii hii hii            > a.txt    20 second maximum
+
+it will create a file,myfile.txt has size of 1.6G
+
+now using two compression
+
+gzip compression first--
+gzip -v myfile.txt        ---- (-v) is used to show background process detail graphically,human readable.
+takes 48 sec with compression ratio 99.7% and size of compressed file is 4.6M
+
+gunzip decompression
+gunzi -v myfile.txt.gz		 is used to decompress file
+takes 39 sec to decompress
+
+===============================
+bzip2 compression
+bzip2 -v myfile.txt   ------size of file is less than 30K
+
+
+bunzip2 decompression
+bunzip2 -v myfile.txt 
+==========================================
+wc -l : Prints the number of lines in a file.
+wc -w : prints the number of words in a file.
+wc -c : Displays the count of bytes in a file.
+wc -m : prints the count of characters from a file.
+wc -L : prints only the length of the longest line in a file.
