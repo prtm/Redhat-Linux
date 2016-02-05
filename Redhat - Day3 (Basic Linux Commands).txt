@@ -1,0 +1,50 @@
+// Reading the content of file
+
+Less and more-
+
+Everything in Linux is file.Sometime you may find its very hard to read the entire file.To navigate in the file Linux provide some cool commands.
+
+command			 Description
+more /var/log/messages --you can scroll through the text of a file
+
+less /var/log/messages --you can scroll in both directions.Use page up and page down keys to scroll
+
+press q anytime to quit from the output of the commands
+
+Let take a example for search
+Now I would search the term pid_max in forward direction
+
+/pid_max -- for forward search pid_max
+?pid_max -- for reverse search pid_max
+
+Cool Feature of Less command--
+it can read Gzip format compression file without uncompressing them.
+
+less /usr/share/man/man1/cat.1.gz
+
+====================================================
+Tail command
+displays the last group of lines in a file.By default,it will show the last 10 lines in the file.
+
+tail /var/log/messages   --show last ten lines of messages file
+
+but you can change it with -n switch. For example to see the 3 line use
+
+tail -3 /var/log/messages
+
+tail -n 3 /var/log/messages --same as previous command
+
+=================================================================
+Head command
+displays the first group of lines in a file.By default
+
+head /var/log/messages   --show first ten lines of messages file
+
+but you can change it with -n switch. For example to see the 3 line use
+
+head -3 /var/log/messages
+
+head -n 3 /var/log/messages --same as previous command
+
+============================================================================
+
