@@ -1,0 +1,130 @@
+Default aliases provide safety features.For a linux system administrator it is a handy tool.
+
+How to check default alias ?
+
+alias		---type this command
+
+---------------------------------
+alias name="value"
+
+name is the name of the new alias.
+value is the command which it initiates.
+e.g.
+alias rjdj="date"
+
+
+No spaces are permitted before or after the equals sign.Any number of aliases can be created simultaneously by enclosing the name and the name in each name-value pair in quotes.
+e.g.
+
+alias rjdj="date" rjdg="time"
+
+The commands, including any options, arguments and redirection operators, are all enclosed within a single pair of quotation marks,which can be single quotes or double quotes.
+
+alias ls="ls -l"
+
+--------------------------------------------------------
+How to make alias permanent
+
+on user level edit ~/.bashrc file
+
+e.g.
+mkdir .trash       ---------- make a trash folder and (.) will keep it hidden
+
+opening ~/.bashrc
+
+in the end of file add
+
+alias rm="mv -t ~/.trash"
+
+rm command used to delete file or folder[with switch]
+In linux ~(tilde sign) represent users home directory
+
+above makes recycle bin stetragy
+		-------------------------------------------
+on system level login from root and open /etc/bashrc
+
+add your custom alias at the bottom of file and save it
+
+--------------------------------------------------------------------------------------
+How to unset alias
+
+remove alias use unalias
+
+e.g. unalias rm
+
+
+change permanent alias
+
+open file mension above
+
+------------------------------------------
+Use alias command to reduce typing 
+
+alias pri="/home/a/b/c/d/e"
+--------------------------------------------
+Use alias for safety of system
+
+alias cp="cp -i"   ------- confirm before overwrite
+
+-------------------------------------
+Use alias to correct misspellings of commands
+
+alias dir="ls"
+
+=====================================================================================================================
+			Sort Command in Linux
+
+sort file_name		---------- alphabetically sort ascending
+sort -k2 file_name 	---------- (k2) refers to the column two,alphabetically sort ascending.
+sort -r k2 file_name	---------- (k2) refers to the column two,alphabetically sort descending or reverse.
+
+
+---------------------------------------------------------------------------
+How to merge file with sort?
+
+-m option allow us merge files in a single file
+
+sort -m file1 file2	--- combine them and sort the result
+
+---------------------------------------------------
+how to save sort output?
+By default sort command will print out on standard output.Nothing is going to write in file.To save output in file either use -o option or use redirect
+
+Method 1:
+sort -r demo_file > new_file
+
+Method 2:
+sort -r demo_file -o new_file
+
+--------------------------------------------
+How to sort number in linux?
+
+Use -n option to sort based on number.Create a simple file with numbers and use default sort order.
+It is sorted alphabetically(by default).
+
+e.g.
+ques.		result
+5		12
+56		34
+7		4
+4		5
+6		56
+78		567
+34		6
+12		7
+567		78
+
+which we don't want?
+
+sort -n number_file
+
+---------------------------
+How to sort file by size
+
+ls command is used to list the contents of directory
+
+ls -l
+
+sort ls -l | sort -k5
+
+=========================================================================================
