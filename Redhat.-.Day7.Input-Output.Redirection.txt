@@ -58,3 +58,22 @@ redirection error
 uptime 	2>net.txt
 	redirect error presented
 
+-----------------------------------------------------------------------------------------
+| ------------------pipe (hold data on ram)
+
+who     and pinky used to check login person details
+
+
+grep  ----  used to search(general regular expression pattern),language to search row-wise
+
+who  |               -------------- output of who is saved in ram
+
+who  |  grep root	-------------- searching for root user in output
+
+who  |  grep -v student	  -------------- searching and showing background process
+
+grep -i redhat new.txt    ------------- searching 'redhat' word in new.txt
+grep -i [rR]edhat  new.txt ------------ searching any one of them 'redhat' and 'Redhat'
+
+further detail about grep and egrep will be on next chapters...
+
