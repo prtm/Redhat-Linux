@@ -1,0 +1,60 @@
+cal -- output at terminal
+
+>  -------- is the output redirection operator
+
+cal > myjancal2016.txt --------- output will redirected to the file name myjancal2016.txt at present working directory
+
+cal >> myjancal2016.txt -------- output will redirected and append at the end of file name myjancal2016.txt at pwd
+
+
+TTY ---- askubuntu.com (karel)
+Early user terminals connected to computers were electromechanical teleprinters or teletypewriters (TeleTYpewriter, TTY), and since then TTY has continued to be used as the name for the text-only console.
+
+There are 6 virtual consoles in Ubuntu accessed by the keyboard shortcuts Ctrl+Alt+F1 to Ctrl+Alt+F6. You can move away from a text-only console (move the console to the background) by using the keyboard shortcut Ctrl+Alt+F7.
+
+e.g. tty
+
+/dev/pts/0 
+
+
+another terminal tty
+
+/dev/pts/1
+
+in second terminal type         cal > /dev/pts/0       --------- output redirected to the first terminal,used 
+in programming
+
+
+/dev/tty2	chvt 2	 --------- ctrl+alt+f2
+-------------------------------------------------------------
+executing n commands one by one
+
+e.g.
+cal;ls
+
+change virtual terminal ------- chvt 
+e.g. 
+
+chvt 3;sleep 3; chvt 1
+
+----------------------------------------------------------------
+checking command successfully run or not
+
+cal	echo $?
+
+0 	output will show successful running of command
+
+
+redirection error 
+
+			cpu
+		      /	    \
+		     /	     \
+		    1	      2
+
+			      |
+			      ------------ 	Microcontroller number or pipe STDERR
+			
+uptime 	2>net.txt
+	redirect error presented
+
