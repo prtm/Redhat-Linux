@@ -1,0 +1,101 @@
+sort command allow us to sort the content of file.By default alphabetical order
+
+cat > test_file
+Sanjay, 30
+Sarvan, 32
+Vikram, 12
+Albert, 19 
+---------
+sort test_file
+Albert, 19
+Sanjay, 30
+Sarvan, 32
+Vikram, 12
+----------------------------------------------
+How to sort by column by linux
+
+sort -k2 test_file
+Vikram, 12
+Albert, 19
+Sanjay, 30
+Sarvan, 32
+-------------------------------------------
+How to sort in reverse order in linux
+
+sort -r -k2 test_file
+Sarvan, 32
+Sanjay, 30
+Albert, 19
+Vikram, 12
+------------------------------------------------
+How to merge file with sort
+cat sample_file
+
+Sodi,   45
+Vakar,  34
+---------
+-m  option allow us merge files in single file.
+
+sort -m sample_file    test_file
+Sanjay, 30
+Sarvan, 32
+Sodi,   45
+Vakar,  34
+Vikram, 12
+Albert, 19
+
+cat demo_file
+Sanjay, 30
+Sarvan, 32
+Sodi,   45
+Vakar,  34
+Vikram, 12
+Albert, 19
+
+------------------------------------------------
+How to save sort output file
+
+By default sort command will print out on standard ouput.Nothing is going to write in file.To save output in file either use -o option
+or use redirect
+
+sort -r demo_file > new_file
+          or
+sort -r demo_file -o new_file
+
+---------------------------------------------------
+How to sort number in linux
+
+Use -n option to sort based on number.Create a simple file with numbers and use default sort order.
+It sorted alphabetically
+
+cat > number_file
+5
+56
+7
+4
+6
+
+sort number_file
+4
+5
+56
+6
+7
+
+To sort this based on number -n optio
+sort -n number_file
+4
+5
+6
+7
+56
+
+------------------------------------------------
+How to sort files by size
+
+You can sort files by size with use of sort command
+
+sort ls -l | sort -k5
+
+---------------------------------------------------
+man sort
