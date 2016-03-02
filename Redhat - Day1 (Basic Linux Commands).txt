@@ -20,7 +20,7 @@ ls 	-S	sort by file size
 ls 	-lt	time-based list
 ls 	-Z	The system_u,object_r,var_t and s0 output demonstrates the current SELinux contexts of the noted files.
 
-//Basic commands to manage file
+//Basic commands to manage file 
 
 cat     means catenate,It reads and write data from files,display the contents of a file at the command line.
 
