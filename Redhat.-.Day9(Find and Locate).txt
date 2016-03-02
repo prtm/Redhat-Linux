@@ -1,0 +1,67 @@
+It is very common to forget the path of file during the exam.
+
+find
+
+find [location ] -name [file name]
+
+find :-command
+location :-where you want to search the file
+-name :- option to specify the file name
+file name :-name of file which you want to search
+
+find / -name vsftpd.conf
+
+this would start search from top level root directory and list the found.
+
+It is time consuming process.Use subdirectories whenever you know it.
+
+find /etc -name vs*.conf
+
+*   Any number of alphanumeric characters
+?   Single alphanumeric characters
+
+
+
+-----------------------------------------------
+
+problem with multiple file found using wildcard?
+
+e.g.
+
+touch file1.conf
+touch demo.conf
+touch fileK.conf
+
+Find the files those start from f and end with conf
+
+error it gives
+find:paths must precede expression
+
+if you type
+find /root/pratice_of_find  -name  f*.conf
+find:paths must expression: fileK.conf
+
+It is due to multiple files found,because what find parsing in this case will look like
+find /root/pratice_of_find  -name file1.conf filek.conf
+
+solution,would stop the shell(bash) expanding your wildcards
+put the f*.conf in quotes
+find /root/pratice_of_find  -name  "f*.conf"
+
+
+-------------------------------------------------------------------------------
+Locate command
+find command is too time consuming specially in 2 hour RHCE exam.use locate command instead of find in exam.
+locate command use a database of installed files and directories.locate command database updated only once in a DAY.
+
+locate [file name]
+
+locate vsftpd.conf
+
+Major drawback of locate command is that it update its database only once in a day.
+database of locate command is updated from /etc/cron.daily/mlocate.cron script.We can manually run this script
+/etc/cron.daily/mlocate.cron
+
+In exam
+Update locate command database as soon as possible and use locate command whenever you need to search any file.
+Use find command when locate doesn't works.Try to specific as much path as you remember when using find command.
