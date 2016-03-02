@@ -39,11 +39,15 @@ rmdir abcd 		removes the directory abcd (if exist)
 rmdir abcd{1..20}	removes the directory abcd1,abcd2,..abcd20 (if exist) 
 rmdir -v abcd{1..20}	(details about progress in terminal),removes the directory abcd1,abcd2,..abcd20 (if exist) 
 
-rmdir doesn't delete directory having data inside it
+directory cann't be deleted if having data inside it,(it is not possible)
+To do that we will need to remove inside data first
 ==================================================================================================
 rm	remove command to remove both files and directory
 
 rm doesn't delete a directory until we give it a command option -rf
+loop through directory till it delete all data and then empty directory or directories will be removed at last
+In copy process first directory will created and then files will be copied
 
-rm -rf abcd   - remove the directory
+
+rm -rvf abcd   - remove the directory,background process shown done forcefully
 rm file.txt   - to remove file whether it contains data or not
